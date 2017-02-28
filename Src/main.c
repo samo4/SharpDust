@@ -110,12 +110,14 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-	  tm1637DisplayDecimal(pa1mV, 0);
-	  timerValue = __HAL_TIM_GET_COUNTER(&htim3);
+	  //tm1637DisplayDecimal(pa1mV, 0);
+	  tm1637DisplayDecimal(1234, 0);
+	  
+	  /*timerValue = __HAL_TIM_GET_COUNTER(&htim3);
 	  
 	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_RESET);
 	  HAL_Delay(50);
-	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_SET); */
 	  HAL_Delay(50);
   }
   /* USER CODE END 3 */
