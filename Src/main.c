@@ -111,14 +111,30 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 	  //tm1637DisplayDecimal(pa1mV, 0);
-	  tm1637DisplayDecimal(1234, 0);
+	  //tm1637DisplayDecimal(1234, 0);
+	  tm1637DisplayRaw(0x38, 0x06, 0x71, 0x79);
+	  HAL_Delay(1500);
+	  tm1637DisplayRaw(0x00, 0x06, 0x6d, 0x00);
+	  HAL_Delay(1500);
+	  tm1637DisplayRaw(0x39, 0x3f, 0x3f, 0x38);
+
+	  HAL_Delay(1500);
+	  tm1637DisplayRaw(0x00, 0x00, 0x00, 0x00);
+	  
+	  HAL_Delay(1500);
+	  tm1637DisplayRaw(0x73, 0x38, 0x77, 0x6e);
+	  HAL_Delay(1500);
+	  tm1637DisplayRaw(0x6d, 0x77, 0x71, 0x79);
+
+	  HAL_Delay(1500);
+	  tm1637DisplayRaw(0x00, 0x00, 0x00, 0x00);
 	  
 	  /*timerValue = __HAL_TIM_GET_COUNTER(&htim3);
 	  
 	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_RESET);
 	  HAL_Delay(50);
 	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_SET); */
-	  HAL_Delay(50);
+	  HAL_Delay(1500);
   }
   /* USER CODE END 3 */
 
